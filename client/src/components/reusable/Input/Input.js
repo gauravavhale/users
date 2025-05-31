@@ -1,6 +1,7 @@
 import React,{Fragment} from 'react';
 import styles from './Input.module.css';
-export const Input=React.memo(({isReadOnly,label,value,type,model,errorMsg,fnChange,options,values})=>{
+
+const Input=React.memo(({isReadOnly,label,value,type,model,errorMsg,fnChange,options,values})=>{
   const fnPrepareInputControls=()=>{
     switch (type) {
       case 'text':
@@ -10,8 +11,6 @@ export const Input=React.memo(({isReadOnly,label,value,type,model,errorMsg,fnCha
         return <Fragment>
             {
               options.map((opt,ind)=>{
-                console.log(opt,ind,value,values)
-                console.log(values[ind]== value)
                 return  <Fragment key={"frag_" + ind}>
                 <input  value={values[ind]} type={type} name={model} className="me-2" onChange={fnChange} checked={values[ind]== value} /><span className="me-4">{opt}</span>
                 </Fragment>
@@ -41,3 +40,7 @@ export const Input=React.memo(({isReadOnly,label,value,type,model,errorMsg,fnCha
       </div>
   </div>
 })
+
+Input.displayName = 'Input';
+
+export default Input;

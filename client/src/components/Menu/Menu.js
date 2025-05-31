@@ -32,7 +32,7 @@ export const Menu = () => {
   useEffect(() => {
     fnResize()
     fnSetMenuItem();
-  }, [])
+  })
   const fnMobileMenuBtnClick = () => {
     setLeft(left == 0 ? -130 : 0);
   }

@@ -2,7 +2,7 @@
 import React,{useContext, useState} from 'react'
 import styles from './register.module.css'
 import configuration from './configuration.json'
-import {Input} from '@/components/reusable/Input'
+import Input from '@/components/reusable/Input'
 import {TextArea} from '@/components/reusable/TextArea'
 import {Select} from '@/components/reusable/Select'
 import {fnValidate,fnValidateForm,fnFormReset} from '@/common/validations'

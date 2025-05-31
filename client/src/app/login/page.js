@@ -2,7 +2,7 @@
 import React, { useContext, useState } from 'react'
 import styles from './login.module.css'
 import configuration from './configuration.json'
-import { Input } from '@/components/reusable/Input'
+import Input from '@/components/reusable/Input/Input'
 import { fnValidate, fnValidateForm } from '@/common/validations'
 import Link from 'next/link'
 import { ServerCall } from '@/common/api'
