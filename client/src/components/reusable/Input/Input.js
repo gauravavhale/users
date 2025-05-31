@@ -41,3 +41,4 @@ export const Input=React.memo(({isReadOnly,label,value,type,model,errorMsg,fnCha
   </div>
 })
 
+Input.displayName = 'Input';
