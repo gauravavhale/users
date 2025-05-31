@@ -1,0 +1,22 @@
+[
+  {
+    "label":"User ID",
+    "tag":"input",
+    "type":"text",
+    "model":"uid",
+    "isRequired":true,
+    "errorMsg":"",
+    "criteria":["Required","EmailFormat"],
+    "value":""
+  },
+  {
+    "label":"Password",
+    "tag":"input",
+    "type":"password",
+    "model":"pwd",
+    "isRequired":true,
+    "errorMsg":"",
+    "criteria":["Required","Min5Chars"],
+    "value":""
+  }
+]
