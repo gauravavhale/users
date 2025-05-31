@@ -4,7 +4,7 @@ import styles from './profile.module.css'
 import { ServerCall } from '@/common/api'
 import { ctx } from '@/context/appContext'
 import configurations from './configuration.json'
-import Input from '@/components/reusable/Input/Input'
+import {Input} from '@/components/reusable/Input/Input'
 import { TextArea } from '@/components/reusable/TextArea'
 import { Select } from '@/components/reusable/Select'
 import { fnValidate,fnValidateForm } from '@/common/validations'
@@ -36,7 +36,7 @@ const Profile = () => {
   }
   useEffect(()=>{
     fnGetUserInfo();
-  })
+  },[])
   const handleChange=(eve)=>{
     const inputControlsClonedArr=JSON.parse(JSON.stringify(inputControls));
     fnValidate(inputControlsClonedArr,eve)

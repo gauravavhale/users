@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react';
 import styles from './Input.module.css';
 
-const Input=React.memo(({isReadOnly,label,value,type,model,errorMsg,fnChange,options,values})=>{
+export const Input=React.memo(({isReadOnly,label,value,type,model,errorMsg,fnChange,options,values})=>{
   const fnPrepareInputControls=()=>{
     switch (type) {
       case 'text':
@@ -41,6 +41,3 @@ const Input=React.memo(({isReadOnly,label,value,type,model,errorMsg,fnChange,opt
   </div>
 })
 
-Input.displayName = 'Input';
-
-export default Input;

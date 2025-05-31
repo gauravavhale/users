@@ -28,7 +28,7 @@ const Users = () => {
   }
   useEffect(()=>{
     fnGetUsers();
-  })
+  },[])
   return (
     <div>
       <Table
@@ -36,7 +36,7 @@ const Users = () => {
         data={data}
         columns={['uid','gen','address']}
       />
-    </div>
+    </div>  
   )
 }
 
